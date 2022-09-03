@@ -11,12 +11,12 @@ module.exports.getRandomData = (req, res) => {
 module.exports.getAllUser = (req, res) => {
     const q = req.query.limit;
 
-    if (q > user.length) {
-        return res.send(user);
+    if (q > data.length) {
+        return res.send(data);
     }
 
     if (q) {
-        return res.send(user.slice(0, q));
+        return res.send(data.slice(0, q));
     }
     res.send(data)
 }
